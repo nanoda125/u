@@ -3,7 +3,7 @@ using DxLibDLL;
 
 class Program
 {
-    static void Main(string[] args)
+    static void Main()
     {
         // ウィンドウモードで起動するように設定
         DX.ChangeWindowMode(DX.TRUE);
@@ -18,8 +18,8 @@ class Program
         {
             // 画面をクリア
             DX.ClearDrawScreen();
-            // 文字を描画
-            DX.DrawString(100, 100, "Hello World", DX.GetColor(255, 255, 255));
+            var muridegozaru = DX.LoadGraph("G5ueHv1boAAJUzV.png");
+            DX.DrawGraph(0,0,muridegozaru,1);
             // 裏画面の内容を表画面に反映
             DX.ScreenFlip();
         }
